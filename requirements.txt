@@ -1,0 +1,10 @@
+openai
+python-telegram-bot
+requests
+slack_sdk
+google-api-python-client
+google-analytics-data
+gspread
+oauth2client
+bitly-api-python
+python-dotenv

@@ -42,41 +42,45 @@ def collect_ga_metrics(snapshot_id):
         print("Could not retrieve Google Analytics report.")
         return
 
-    conn = sqlite3.connect(DB_FILE)
-    cursor = conn.cursor()
+    conn = None
+    try:
+        conn = sqlite3.connect(DB_FILE)
+        cursor = conn.cursor()
 
-    metrics = []
-    for row in report.rows:
-        metrics.append((
-            'Google Analytics',
-            'Active Users',
-            row.metric_values[0].value,
-            row.dimension_values[0].value,
-            snapshot_id
-        ))
-        metrics.append((
-            'Google Analytics',
-            'New Users',
-            row.metric_values[1].value,
-            row.dimension_values[0].value,
-            snapshot_id
-        ))
-        metrics.append((
-            'Google Analytics',
-            'Total Revenue',
-            row.metric_values[2].value,
-            row.dimension_values[0].value,
-            snapshot_id
-        ))
+        metrics = []
+        for row in report.rows:
+            metrics.append((
+                'Google Analytics',
+                'Active Users',
+                row.metric_values[0].value,
+                row.dimension_values[0].value,
+                snapshot_id
+            ))
+            metrics.append((
+                'Google Analytics',
+                'New Users',
+                row.metric_values[1].value,
+                row.dimension_values[0].value,
+                snapshot_id
+            ))
+            metrics.append((
+                'Google Analytics',
+                'Total Revenue',
+                row.metric_values[2].value,
+                row.dimension_values[0].value,
+                snapshot_id
+            ))
 
-    cursor.executemany(
-        "INSERT INTO metrics (source, metric_name, value, date, snapshot_id) VALUES (?, ?, ?, ?, ?)",
-        metrics
-    )
+        cursor.executemany(
+            "INSERT INTO metrics (source, metric_name, value, date, snapshot_id) VALUES (?, ?, ?, ?, ?)",
+            metrics
+        )
 
-    conn.commit()
-    conn.close()
-    print("Successfully collected Google Analytics metrics.")
+        conn.commit()
+        print("Successfully collected Google Analytics metrics.")
+    finally:
+        if conn:
+            conn.close()
 
 if __name__ == "__main__":
     collect_ga_metrics(f"manual_run_{datetime.now().isoformat()}")

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ea-memory"
+version = "1.0.0"
+description = "Simple memory system with tagging for Claude Code"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+]
+
+[project.scripts]
+ea-memory = "server:mcp.run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+include = ["server.py"]

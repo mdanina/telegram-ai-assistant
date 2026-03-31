@@ -1,19 +1,31 @@
-# Company Strategy
+# Strategy
 
-## Vision
+## Mission
 
-To become the leading ecosystem for AI-powered businesses, providing the tools, education, and services necessary for entrepreneurs to thrive in the age of automation.
+Your company's mission statement goes here.
 
-## Core Strategic Pillars
+## Key Principles
 
-1.  **Dominate the AI Agency Space:** Solidify Morningside AI as the premier provider of AI automation solutions for local service businesses.
-2.  **Build the #1 AI Business Community:** Grow the AAA program into the most valuable and supportive community for AI entrepreneurs.
-3.  **Create Essential AI Tools:** Develop and launch a suite of SaaS products that solve critical pain points for AI-driven businesses.
-4.  **Establish Unrivaled Brand Authority:** Produce industry-leading content that establishes Liam Ottley and the Morningside brand as the definitive voice in the AI business space.
+1. **Principle 1** — description
+2. **Principle 2** — description
+3. **Principle 3** — description
+4. **Principle 4** — description
 
-## 2026 Key Initiatives
+## Competitive Advantage
 
--   **Q1:** Launch the AIOS as a Service (AaaS) offering through Morningside AI.
--   **Q2:** Double the size of the AAA community.
--   **Q3:** Launch the first Morningside Ventures SaaS product.
--   **Q4:** Achieve 1 million subscribers on the Liam Ottley YouTube channel.
+- How your company differs from competitors
+- What makes your approach unique
+
+## Target Audiences
+
+- Segment 1: description
+- Segment 2: description
+- Segment 3: description
+
+## Specializations
+
+List of key specializations and services.
+
+## Limitations
+
+What you don't do or handle — referral partners for these cases.

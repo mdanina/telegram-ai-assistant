@@ -1,31 +1,37 @@
-# Business Hierarchy
+# Company Structure
 
-This document outlines the structure of the various business entities under the main holding group.
+## Your Company Name
 
-## Morningside Group
+**Registration ID:** YOUR_REGISTRATION_ID
+**Tax ID:** YOUR_TAX_ID
+**Legal Address:** Your Address
+**Industry Code:** XX.XX — Your Industry
+**CEO:** Your Name — CEO
+**Founder:** Your Name (100%)
 
-**Strategy:** To build and scale a portfolio of AI-first businesses that leverage automation and intelligence to dominate their respective niches.
+### Description
 
-### 1. Morningside AI
+Brief description of your company and what it does.
 
--   **Description:** An AI automation and marketing systems agency.
--   **Focus:** SMS, CRM, AI receptionists, and growth automation for local service businesses (spas, med spas, clinics).
--   **Keywords:** Aquadex, GHL, GoHighLevel, SMS, workflows, triggers, webhooks, campaigns, onboarding, funnels, Stripe, client portal, AI receptionist.
+### Key Areas
 
-### 2. Morningside Education
+1. **Area 1** — description
+2. **Area 2** — description
+3. **Area 3** — description
 
--   **Description:** The educational arm, focused on teaching others how to build and scale AI-centric businesses.
--   **Flagship Program:** The AAA (AI Agency Accelerator) program.
--   **Keywords:** AAA, accelerator, Skool, community, mentorship, webinars.
+### Technology Stack
 
-### 3. Morningside Ventures
+- Video: Jitsi / Zoom / Google Meet
+- Payments: your payment provider
+- AI: OpenAI GPT-4o, AssemblyAI
+- Analytics: Google Analytics / your analytics
+- Notifications: Web Push API, Telegram Bot
 
--   **Description:** The SaaS and product development arm of the group.
--   **Focus:** Building and investing in AI-powered software tools.
--   **Keywords:** SaaS, product development, investment, software.
+### Bank Details
 
-### 4. Morningside Content
+- **Bank:** Your Bank
+- **Account:** XXXXXXXXXXXX
 
--   **Description:** The media and content creation arm.
--   **Focus:** Producing high-quality content (YouTube videos, articles, social media) to build brand authority and generate leads for the other business units.
--   **Keywords:** YouTube, content creation, lead magnet, vlogging, personal brand.
+### Contacts
+
+- **Email:** hello@yourcompany.com

@@ -1,36 +1,54 @@
-# Daily Intelligence Briefing
+# Ежедневный бриф для CEO
 
-**Date:** {date}
+**Дата:** {date}
 
-## 1. Executive Summary
+ВАЖНО: Весь отчёт должен быть написан на русском языке. Никакого английского.
 
-Synthesize the key insights from the data and intelligence summaries below into a concise, high-level overview of the business status. Highlight the most critical information a CEO needs to know first thing in the morning.
+## 1. Главное за день
 
-## 2. Data OS Snapshot
+Кратко синтезируй ключевые инсайты из метрик и данных ниже. Что CEO должен узнать в первую очередь утром? Выдели самое критичное — в 3-5 предложениях.
 
-Here is a summary of the latest metrics from the Data OS:
+## 2. Внешние метрики
 
 {data_os_summary}
 
-Based on this data, provide a brief analysis. Are we on track to meet our goals? Are there any worrying trends?
+Если есть данные — кратко проанализируй тренды. Если данных нет — не выдумывай.
 
-## 3. Intelligence Layer Summary
+## 2.1 Product Metrics
 
-Here is a summary of the latest insights from the Intelligence Layer:
+{product_summary}
+
+Проанализируй как CEO-дашборд. Фокус:
+1. **Воронка**: конвертируются ли лиды? Где отвал на каждом этапе?
+2. **Привлечение**: сколько новых клиентов за месяц?
+3. **Динамика выручки**: тренд, итог за месяц, средний чек, MRR.
+4. **Конверсия**: завершают ли пользователи ключевые действия?
+5. **Ёмкость**: достаточно ли ресурсов для роста?
+6. **Удержание**: повторные клиенты, retention metrics.
+Отметь аномалии, узкие места, тревожные тренды.
+
+## 3. Intelligence Layer (встречи, заметки, коммуникации)
 
 {intelligence_os_summary}
 
-Based on this, what are the key themes emerging from meetings, Slack, and voice notes? Are there any urgent tasks or strategic discussions that need attention?
+Если есть транскрипты встреч — проанализируй:
+1. **Ключевые решения**: что было принято на созвонах?
+2. **Задачи и action items**: что нужно сделать и кому?
+3. **Стратегические сигналы**: есть ли темы, требующие внимания CEO?
+4. **Риски**: упоминались ли проблемы, блокеры, дедлайны?
+Если встреч не было — так и напиши, не выдумывай.
 
-## 4. Strategic Recommendations (SWOT)
+## 4. Рекомендации (SWOT)
 
-Based on all the information above and your deep knowledge of our business strategy, provide a brief SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) for the day. What are the top 1-2 recommendations for action today?
+На основе всех данных выше — кратко:
 
--   **Strengths:**
--   **Weaknesses:**
--   **Opportunities:**
--   **Threats:**
+- **Сильные стороны:**
+- **Слабые стороны:**
+- **Возможности:**
+- **Угрозы:**
 
-## 5. AIOS Status
+Топ 1-2 рекомендации на сегодня.
 
-Provide a brief status update on the AIOS itself. Are all systems operational? Are there any errors or issues that need to be addressed?
+## 5. Статус AIOS
+
+Кратко: все ли системы работают? Есть ли ошибки или проблемы?

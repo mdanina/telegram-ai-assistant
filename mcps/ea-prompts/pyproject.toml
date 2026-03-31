@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ea-prompts"
+version = "1.0.0"
+description = "Prompt library demonstrating MCP Prompts capability"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+]
+
+[project.scripts]
+ea-prompts = "server:mcp.run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+include = ["server.py"]

@@ -1,25 +1,21 @@
-# Team Roster
-
-This document outlines the key members of the team, their roles, and their business unit alignment.
+# Team
 
 ## Leadership
 
--   **Liam Ottley:** CEO, Morningside Group
-    -   **Responsibilities:** Overall strategy, vision, and leadership across all business units.
+- **CEO Name:** CEO, Founder
+    - Strategy, product, operations
 
-## Morningside AI
+- **CSO Name:** Chief Scientific Officer
+    - Methodology architecture and validation
 
--   **[Head of Agency]:** (To be hired)
-    -   **Responsibilities:** Manages all client relationships, project delivery, and agency operations.
--   **[Lead Developer]:** (To be hired)
-    -   **Responsibilities:** Oversees all technical development and implementation for client projects.
+## Specialists
 
-## Morningside Education
+- **Category 1 specialists** — description of what they do
+- **Category 2 specialists** — description of what they do
+- **Category 3 specialists** — description of what they do
+- **Coordinators** — trained in the platform's routing methodology
 
--   **[Community Manager]:** (To be hired)
-    -   **Responsibilities:** Manages the AAA Skool community, engages with members, and facilitates a positive learning environment.
+## Partner Specialists (not in-house)
 
-## Morningside Content
-
--   **[Content Manager]:** (To be hired)
-    -   **Responsibilities:** Manages the content calendar, oversees production, and ensures all content aligns with the overall brand strategy.
+- **External specialist type 1** — via licensed partner clinics by referral
+- **External specialist type 2** — via licensed partner clinics by referral

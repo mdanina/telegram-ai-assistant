@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      { "matcher": "Bash", "hooks": [{ "type": "command", "command": "uv run .claude/hooks/damage-control/bash-tool-guard.py", "timeout": 10000 }] },
+      { "matcher": "Edit", "hooks": [{ "type": "command", "command": "uv run .claude/hooks/damage-control/edit-tool-guard.py", "timeout": 10000 }] },
+      { "matcher": "Write", "hooks": [{ "type": "command", "command": "uv run .claude/hooks/damage-control/write-tool-guard.py", "timeout": 10000 }] }
+    ],
+    "PostToolUse": [
+      { "matcher": "Bash", "hooks": [
+        { "type": "command", "command": "uv run .claude/hooks/damage-control/bash-output-validator.py", "timeout": 10000 },
+        { "type": "command", "command": "uv run .claude/hooks/validators/auto-test-runner.py", "timeout": 10000 }
+      ]}
+    ]
+  },
+  "deny": [
+    "Bash(rm -rf *)",
+    "Bash(sudo *)",
+    "Read(.env)"
+  ]
+}

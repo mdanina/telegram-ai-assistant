@@ -39,23 +39,27 @@ def collect_youtube_metrics(snapshot_id):
         print("Could not retrieve YouTube channel stats.")
         return
 
-    conn = sqlite3.connect(DB_FILE)
-    cursor = conn.cursor()
+    conn = None
+    try:
+        conn = sqlite3.connect(DB_FILE)
+        cursor = conn.cursor()
 
-    metrics = [
-        ('YouTube', 'Subscribers', stats.get('subscriberCount', 0), datetime.now().isoformat(), snapshot_id),
-        ('YouTube', 'Total Views', stats.get('viewCount', 0), datetime.now().isoformat(), snapshot_id),
-        ('YouTube', 'Total Videos', stats.get('videoCount', 0), datetime.now().isoformat(), snapshot_id),
-    ]
+        metrics = [
+            ('YouTube', 'Subscribers', stats.get('subscriberCount', 0), datetime.now().isoformat(), snapshot_id),
+            ('YouTube', 'Total Views', stats.get('viewCount', 0), datetime.now().isoformat(), snapshot_id),
+            ('YouTube', 'Total Videos', stats.get('videoCount', 0), datetime.now().isoformat(), snapshot_id),
+        ]
 
-    cursor.executemany(
-        "INSERT INTO metrics (source, metric_name, value, date, snapshot_id) VALUES (?, ?, ?, ?, ?)",
-        metrics
-    )
+        cursor.executemany(
+            "INSERT INTO metrics (source, metric_name, value, date, snapshot_id) VALUES (?, ?, ?, ?, ?)",
+            metrics
+        )
 
-    conn.commit()
-    conn.close()
-    print("Successfully collected YouTube metrics.")
+        conn.commit()
+        print("Successfully collected YouTube metrics.")
+    finally:
+        if conn:
+            conn.close()
 
 if __name__ == "__main__":
     collect_youtube_metrics(f"manual_run_{datetime.now().isoformat()}")

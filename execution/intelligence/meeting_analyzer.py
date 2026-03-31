@@ -7,10 +7,11 @@ and other key insights.
 """
 
 import os
-import openai
+import sys
 import json
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+from common import get_openai_client, call_gpt, MODEL_MAIN
 
 def load_context():
     """Loads the core business context from the context/ directory."""
@@ -47,19 +48,19 @@ Based on the transcript and the business context, extract the following informat
 -   `content_ideas`: Any ideas mentioned that could be turned into content (YouTube videos, blog posts, etc.).
 -   `sentiment`: The overall sentiment of the meeting (e.g., Positive, Neutral, Negative, Mixed).
 
-**JSON Output:**
+Return only valid JSON, no other text.
 """
 
     try:
-        response = openai.ChatCompletion.create(
-            model="gpt-4.1-mini",
+        response = call_gpt(
             messages=[
-                {"role": "system", "content": "You are a helpful assistant that provides analysis in JSON format."},
+                {"role": "system", "content": "You are a helpful assistant that provides analysis in JSON format. Return only valid JSON."},
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.2,
+            model=MODEL_MAIN,
+            max_tokens=2048,
         )
-        analysis_json = response.choices[0].message["content"]
+        analysis_json = response.content
         return json.loads(analysis_json)
 
     except Exception as e:
@@ -69,9 +70,9 @@ Based on the transcript and the business context, extract the following informat
 if __name__ == "__main__":
     # Example usage with a dummy transcript
     dummy_transcript = """
-    Liam: Okay team, great meeting. So, just to recap, we need to launch the new AaaS offering by the end of Q1.
-    Sarah (assumed): I can take the lead on drafting the sales page copy.
-    Liam: Perfect. And let's also brainstorm a YouTube video to announce it. Maybe something about the future of AI in business.
+    Alex: Okay team, great meeting. So, just to recap, we need to launch the new offering by the end of Q1.
+    Sarah: I can take the lead on drafting the sales page copy.
+    Alex: Perfect. And let's also brainstorm a video to announce it. Maybe something about the future of AI in business.
     """
     analysis = analyze_transcript(dummy_transcript)
     if analysis:

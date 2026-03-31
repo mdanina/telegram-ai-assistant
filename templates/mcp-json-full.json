@@ -1,0 +1,84 @@
+{
+  "_comment": "Full MCP template - uncomment what you need",
+
+  "mcpServers": {
+
+    "_section_browser": "=== Browser Automation ===",
+
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+
+    "_section_storage": "=== Data Storage ===",
+
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+
+    "_comment_supabase": "Uncomment and add your keys",
+    "_supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@latest"],
+      "env": {
+        "SUPABASE_URL": "YOUR_SUPABASE_URL",
+        "SUPABASE_KEY": "YOUR_SUPABASE_KEY"
+      }
+    },
+
+    "_section_files": "=== File Operations ===",
+
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "./src",
+        "./docs"
+      ]
+    },
+
+    "_section_git": "=== Version Control ===",
+
+    "_git": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-git"]
+    },
+
+    "_section_ea": "=== EA Course MCPs ===",
+
+    "_ea-memory": {
+      "command": "uv",
+      "args": ["run", "--directory", "/path/to/ea-memory", "python", "server.py"]
+    },
+
+    "_ea-prompts": {
+      "command": "uv",
+      "args": ["run", "--directory", "/path/to/ea-prompts", "python", "server.py"]
+    },
+
+    "_ea-journal": {
+      "command": "uv",
+      "args": ["run", "--directory", "/path/to/ea-journal", "python", "server.py"]
+    },
+
+    "_section_apis": "=== API Integrations (require API keys) ===",
+
+    "_notion": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-notion"],
+      "env": {
+        "NOTION_API_KEY": "YOUR_NOTION_KEY"
+      }
+    },
+
+    "_github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "YOUR_GITHUB_TOKEN"
+      }
+    }
+  }
+}

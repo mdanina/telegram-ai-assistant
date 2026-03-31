@@ -31,6 +31,23 @@ def create_database():
         )
     """)
 
+    # Create the tasks table for GTD reminders
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS tasks (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            raw_text TEXT NOT NULL,
+            next_action TEXT,
+            project TEXT,
+            context TEXT,
+            delegated_to TEXT,
+            due_date TEXT,
+            status TEXT NOT NULL DEFAULT 'pending',
+            created_at TEXT NOT NULL,
+            reminded_at TEXT,
+            domain TEXT DEFAULT 'personal'
+        )
+    """)
+
     conn.commit()
     conn.close()
     print("Database and tables created successfully.")

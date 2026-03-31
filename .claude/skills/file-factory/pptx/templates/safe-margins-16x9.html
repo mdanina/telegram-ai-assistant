@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+  Safe Margins Template for html2pptx (16:9 aspect ratio)
+
+  LAYOUT RULES:
+  - Body: 720pt x 405pt (standard 16:9)
+  - Safe zone: 0.5" (36pt) from all edges
+  - Content area: 648pt x 333pt (720-72 x 405-72)
+  - Use fixed dimensions, NOT flexbox for positioning
+  - Minimum 45pt bottom margin to prevent overflow
+
+  VALIDATION:
+  html2pptx enforces 0.5" minimum margin from all edges.
+  Content exceeding these bounds will cause validation errors.
+-->
+<html>
+<head>
+<style>
+/* Reset and base */
+html { background: #ffffff; }
+body {
+  width: 720pt;
+  height: 405pt;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  /* Use display: flex to prevent margin collapse breaking overflow validation */
+  display: flex;
+}
+
+/* Safe content container - stays within 0.5" margins */
+.safe-zone {
+  position: absolute;
+  top: 36pt;      /* 0.5 inch */
+  left: 36pt;     /* 0.5 inch */
+  right: 36pt;    /* 0.5 inch */
+  bottom: 45pt;   /* Extra margin for safety */
+  /* Available space: 648pt x 324pt */
+}
+
+/* Title area */
+.title {
+  font-size: 36pt;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 20pt;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 18pt;
+  color: #718096;
+  margin-bottom: 30pt;
+}
+
+/* Content area for body text/lists */
+.content {
+  font-size: 14pt;
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+/* Two-column layout (preferred for charts/tables) */
+.two-column {
+  display: flex;
+  gap: 30pt;
+}
+.two-column .left {
+  flex: 0 0 40%;
+}
+.two-column .right {
+  flex: 0 0 55%;
+}
+
+/* Chart/table placeholder */
+.placeholder {
+  background: #e2e8f0;
+  border: 2pt dashed #a0aec0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #718096;
+  font-size: 12pt;
+}
+
+/* Shape with background (use on DIV only) */
+.box {
+  background: #f7fafc;
+  border-radius: 8pt;
+  padding: 15pt;
+}
+
+/* Accent border (use on DIV only) */
+.accent-left {
+  border-left: 4pt solid #4299e1;
+  padding-left: 15pt;
+}
+</style>
+</head>
+<body>
+
+<div class="safe-zone">
+  <!-- TITLE SLIDE EXAMPLE -->
+  <h1 class="title">Slide Title Here</h1>
+  <p class="subtitle">Subtitle or tagline goes here</p>
+
+  <div class="content">
+    <p>Body text content goes here. Remember:</p>
+    <ul>
+      <li>All text must be in p, h1-h6, ul, or ol tags</li>
+      <li>Never use manual bullet symbols</li>
+      <li>Backgrounds/borders only work on div elements</li>
+    </ul>
+  </div>
+
+  <!-- CHART PLACEHOLDER EXAMPLE (uncomment to use) -->
+  <!--
+  <div class="two-column">
+    <div class="left">
+      <p>Key insights:</p>
+      <ul>
+        <li>Point one</li>
+        <li>Point two</li>
+      </ul>
+    </div>
+    <div class="right">
+      <div id="chart" class="placeholder" style="width: 100%; height: 200pt;">
+        <p>Chart placeholder</p>
+      </div>
+    </div>
+  </div>
+  -->
+</div>
+
+</body>
+</html>

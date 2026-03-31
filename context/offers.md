@@ -1,22 +1,41 @@
-# Offers & Services
+# Products & Services
 
-This document details the primary offers across the Morningside Group.
+## 1. Service Category 1
 
-## Morningside AI (Agency)
+- Description of what this service includes
+- Pricing model
 
--   **AIOS as a Service (AaaS):** A high-ticket, in-person workshop and implementation service where Liam and his team build a custom AIOS for a client's business. This is the flagship offering.
--   **AI-Powered Lead Generation:** A monthly retainer service that implements and manages AI-driven marketing and lead nurturing campaigns.
--   **AI Receptionist:** A setup and management service for an AI-powered phone system that handles inbound calls, books appointments, and answers common questions.
+## 2. Service Category 2
 
-## Morningside Education
+- Description
+- **Price:** from $XX
+- Available options
+- Format: online video consultation
 
--   **AI Agency Accelerator (AAA):** A comprehensive online program that teaches students how to start and scale their own AI agencies. Includes community access, coaching, and resources.
+## 3. Service Category 3
 
-## Morningside Ventures
+- Description of the comprehensive offering
+- How it works step by step
+- Pricing model
 
--   **(Upcoming) SaaS Product #1:** An AI-powered tool for generating and testing high-converting video sales letters (VSLs).
+## 4. Client Dashboard (included)
 
-## Morningside Content
+- Feature 1
+- Feature 2
+- Feature 3
+- Feature 4
 
--   **Free Content:** YouTube videos, articles, and social media content designed to provide value and attract potential customers to the paid offerings.
--
+## Specialists
+
+| Specialist | Description |
+|------------|----------|
+| Type 1 | Areas of expertise |
+| Type 2 | Areas of expertise |
+| Type 3 | Areas of expertise |
+
+## Service Format
+
+- All consultations online (video)
+- Available worldwide
+- Sessions in client's timezone
+- Booking within 24 hours

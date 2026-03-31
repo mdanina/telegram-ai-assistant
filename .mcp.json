@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "ea-memory": {
+      "command": "uv",
+      "args": ["run", "--directory", "./mcps/ea-memory", "python", "server.py"]
+    },
+    "ea-prompts": {
+      "command": "uv",
+      "args": ["run", "--directory", "./mcps/ea-prompts", "python", "server.py"]
+    },
+    "ea-journal": {
+      "command": "uv",
+      "args": ["run", "--directory", "./mcps/ea-journal", "python", "server.py"]
+    }
+  }
+}
